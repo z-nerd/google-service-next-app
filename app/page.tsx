@@ -49,11 +49,11 @@ export default function Home() {
           />
 
           <FormControl variant="standard" fullWidth>
-            <InputLabel id="parcel-type-label">Parcel's Type</InputLabel>
+            <InputLabel id="parcel-type-label">Parcel Type</InputLabel>
             <Select
               labelId="parcel-type-label"
               id="parcel-type-select"
-              label="Parcel's Type"
+              label="Parcel Type"
               value={parcel !== -1 ? String(parcel) : ""}
               onChange={onParcelChange}>
               {

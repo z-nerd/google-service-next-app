@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server"
-import { firebase_app } from "@/lib/firebase"
+import { firebase_app } from "../lib/firebase"
 import { getFunctions, httpsCallable } from "firebase/functions"
 
 

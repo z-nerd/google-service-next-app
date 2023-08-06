@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getFirbaseImageUrl } from "@/lib/firebase";
+import { getFirbaseImageUrl } from "../lib/firebase";
 
 
 export async function POST(request: Request) {
