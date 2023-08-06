@@ -5,3 +5,59 @@
     background-color: #fff;
     opacity: 0.90;
 }
+
+.parcel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &_img {
+            margin-inline-end: 1rem;
+        }
+    }
+
+    &-description {
+        width: 10rem;
+        text-align: center;
+        margin-inline: 3rem;
+    }
+}
+
+
+.transport {
+    margin-block: 1rem;
+    padding: 1rem;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    border-radius: 0.2rem;
+
+    &-cards {
+        margin-block: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &-card {
+        display: flex;
+        flex-direction: column;
+        width: 5rem;
+        height: 5rem;
+        background-color: #dedede;
+        text-align: center;
+        font-size: 0.7rem;
+
+        & img {
+            width: 55px;
+            margin-inline: auto;
+        }
+        
+        &--active {
+            background-color: #f5f5f5;
+        }
+    }
+}

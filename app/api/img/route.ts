@@ -1,6 +1,5 @@
-import { collection, getDocs, getFirestore } from "firebase/firestore";
 import { NextResponse } from "next/server";
-import { firebase_app, getFirbaseImageUrl } from "../lib/firebase";
+import { getFirbaseImageUrl } from "@/lib/firebase";
 
 
 export async function POST(request: Request) {
@@ -19,12 +18,12 @@ export async function POST(request: Request) {
         })
     } catch (error: any) {
         return NextResponse.json({
-            message: "Something went wrong and can't get data from firebase!",
-            errorName: error.name,
-            errorMessage: error.message,
-        }, {
-            status: 500
-        })
+            error: {
+                name: error?.name || "unknown",
+                message: error?.message || "Something went wrong!",
+                ...error
+            }
+        }, { status: 500 })
     }
 }
 
